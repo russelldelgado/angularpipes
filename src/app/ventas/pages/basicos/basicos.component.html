@@ -1,0 +1,83 @@
+<div class="text-layout">
+
+    <h1>Pipes Básicos</h1>
+
+    <p>Piples incluidos en el common module de de angular</p>
+
+</div>
+
+<div class="p-grid text-layout">
+
+    <div class="p-col-12 p-sm-4 ">
+        <p-card header="UPPER CASE" [subheader]="nombreLower">
+            {{nombreLower | lowercase}}
+        </p-card>
+    </div>
+
+    <div class="p-col-12 p-sm-4">
+        <p-card header="lower case" [subheader]="nombreUpper">
+            {{nombreUpper | uppercase}}
+        </p-card>
+    </div>
+
+    <div class="p-col-12 p-sm-4 ">
+        <p-card header="Title Case" [subheader]="nombreCompleto">
+            {{nombreCompleto | titlecase}}
+        </p-card>
+    </div>
+
+</div>
+
+
+<div class="text-layout">
+
+    <h1>Date | Fecha | Pipe</h1>
+
+    <p>Pipe para manejar las fechas</p>
+
+</div>
+<div class="p-grid text-layout">
+
+    <div class="p-col-6  ">
+        <p-card >
+            <ul>
+                <li>Fecha  </li>
+                <li>Fecha | pipe  </li>
+                <li>Fecha | pipe | shortDate </li>
+                <li>Fecha | pipe | long </li>
+                <li>Fecha | pipe | custom </li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li>fecha | date:'long':'GMT+3'</li>
+                <li>fecha | date:'long':'GMT+2'</li>
+                <li>fecha | date:'long':'':'en'</li>
+
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="p-col-6 ">
+        <p-card >
+            <ul>
+                <li>{{fecha }}</li>
+                <li>{{fecha | date }}</li>
+                <li>{{fecha | date:'shortDate' }}</li>
+                <li>{{fecha | date:'long' }}</li>
+                <li>{{fecha | date:'y-YY-MM' }}</li>
+            </ul>
+            <hr>
+
+            <ul>
+                <li>{{fecha | date:'long':'GMT+3' }}</li>
+                <li>{{fecha | date:'long':'GMT+2' }}</li>
+                <li>{{fecha | date:'long':'':'fr' }}</li>
+            </ul>
+        </p-card>
+    </div>
+
+   
+
+</div>

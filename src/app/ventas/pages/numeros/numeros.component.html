@@ -1,0 +1,30 @@
+<div class="text-layout">
+
+    <h1>Pipes Decimal y Porcentajes </h1>
+
+    <p>Piples incluidos en el common module de de angular</p>
+
+</div>
+
+
+<div class="p-grid">
+
+
+    <div class="p-col-4">
+        <p-card header="Ventas netas" subheader="Del presente año">
+            <i class="pi pi-dollar"></i>
+            {{(ventasNetas + 4) | number:'1.2-2'}} <!--dentro de los numero podemos sumar , y en el pipe podemos indicar el numero de decimales que quermos como mínimo y como maximo-->
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="Ventas brutas" subheader="Del presente año">
+            {{(ventasNetas + 4) | currency:'USD':'symbol-narrow':'.3-3'}} <!--dentro de los numero podemos sumar , y en el pipe podemos indicar el numero de decimales que quermos como mínimo y como maximo-->
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="Porcentaje de ventas" subheader="Del presente año">
+            {{ porcentaje | percent:'2.2-2'  }} 
+        </p-card>
+    </div>
+
+</div>

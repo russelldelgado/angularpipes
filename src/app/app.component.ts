@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipesApp';
+  title = 'russell jhoel delgado muñoz';
+
+
+  cambiarNombre(){
+    this.title = 'No te puedes cambiar de nombre tan facilmente pelotudo';
+  }
+
 }
