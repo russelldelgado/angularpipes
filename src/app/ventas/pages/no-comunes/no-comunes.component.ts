@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -79,7 +80,51 @@ export class NoComunesComponent {
 
   //key value pipe
 
+  persona = {
+    nombre  : "russell",
+    edad : 33,
+    direccion : "manabi ecuador"
+  }
 
 
+  //json pipe
+  //el problema que tenemos con esto es que si mandamos una funcion o algo parecido no lo interpreta
+
+  heroes = [
+    {
+      nombre : "superman",
+      vuela : true
+    },
+    {
+      nombre : "batman",
+      vuela : false
+    },
+    {
+      nombre : "ironman",
+      vuela : false
+    },
+    {
+      nombre : "kind kardasham",
+      vuela : true
+    },
+  ];
+ 
   
+  //pipe async
+
+  //importamos de rxjs  el intervalo
+
+  miObservable  = interval(1000);
+
+  //creamos una promesa , no hace falta importar nada ya que va implicita en el código.
+
+  valorPromesa = new Promise((resolve , reject) =>{
+
+    setTimeout(() =>{
+      resolve('Se ha resulto el problema despues de unos segundos');
+    }, 4000);
+
+  })
+
+
 }

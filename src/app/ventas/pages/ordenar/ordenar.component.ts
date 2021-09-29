@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdenarComponent implements OnInit {
 
+
+  mayuscula : boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  cambiarInformacion(){
+    this.mayuscula = !this.mayuscula;
   }
 
 }
