@@ -12,6 +12,7 @@ export class NoComunesComponent {
 
   nombre : string  = "russell";
   genero : string = "masculino";
+  rellenar : number = 0;
   rellenarLista : boolean = false;
 
   //nuestro i18n select necesita un mapa con los argumentos que le voy a pasar
@@ -54,13 +55,29 @@ export class NoComunesComponent {
   }
 
   comprobarNumeroDeClientes(){
-    this.rellenarLista = false;
-    if(this.clientes.length == 0){
+    if(this.rellenar ==1 && this.clientes.length == 0 ){
+      
+      this.rellenar++;
+    }
+
+    if(this.rellenar ==0 && this.clientes.length == 0 ){
       this.rellenarLista = true;
+      this.rellenar++;
+      console.log(this.rellenar);
+    }
+    
+
+
+    if(this.clientes.length == 0 && this.rellenar ==2){
+      this.rellenarLista = false;
+      this.rellenar = 0;
       this.clientes = ['maria' , 'pedro' , 'juan' , 'nuria'];
     }
   }
 
+
+
+  //key value pipe
 
 
 
